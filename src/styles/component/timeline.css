@@ -1,0 +1,138 @@
+.app-container-na {
+  padding: 16px;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #34577e;
+  top: 0;
+  bottom: 0;
+  left: 20%;
+  margin-left: -1px;
+}
+
+.container {
+  padding: 16px 0px 16px 32px;
+  position: relative;
+  background: inherit;
+  width: 80%;
+}
+
+.container.right {
+  left: 20%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffc107;
+  border: 2px solid #34577e;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container.right::after {
+  left: -8px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #34577e;
+  z-index: 1;
+}
+
+.container.right::before {
+  left: 8px;
+}
+
+.container .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffc107;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+  margin-left: -16px;
+}
+
+.container.right .date {
+  left: -95px;
+}
+
+.container .content {
+  /* padding: 30px 90px 30px 30px; */
+  background-color: #234973;
+  position: relative;
+  border-radius: 12px;
+}
+
+.container.right .content {
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.container .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #ffc107;
+}
+
+.container .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@media (max-width: 767.98px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 120px;
+  }
+
+  .container.right {
+    left: 0%;
+  }
+
+  .container.right::after {
+    left: 82px;
+  }
+
+  .container.right::before {
+    left: 100px;
+    border-color: transparent #34577e transparent transparent;
+  }
+
+  .container.right .date {
+    right: auto;
+    left: 10px;
+  }
+}
