@@ -104,6 +104,10 @@
   background-color: #012d5e;
 }
 
+.list-item-delete:active {
+  transform: scale(0.95)
+}
+
 @media (max-width: 768px) {
   .home-container{
     flex-direction: column;
