@@ -8,8 +8,8 @@ import HomeForm from './component/HomeForm'
 import HomeTimeline from './component/HomeTimeline'
 
 const HomeViewPage: React.FC = () => {
-  const [covid, setCovid] = React.useState<CovidDTO>({})
-  const [covidTranform, setCovidtranform] = React.useState<CovidTranformDTO>({})
+  const [covid, setCovid] = React.useState<CovidDTO>({} as CovidDTO)
+  const [covidTranform, setCovidtranform] = React.useState<CovidTranformDTO>({}  as CovidTranformDTO)
 
   const onDelete = async (slotId: string) => {
     const filterSlot = covid.slot.filter(item => item.slotId !== slotId)
